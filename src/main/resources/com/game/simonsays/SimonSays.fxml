@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-image: url('images/5a7e85e2ef0e0c76d5446556732f93a3.png'); -fx-background-size: cover; -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.simonsays.SimonController">
+   <children>
+      <Text fill="#50c855" layoutX="342.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAYS!">
+         <font>
+            <Font name="Showcard Gothic" size="49.0" />
+         </font>
+      </Text>
+      <Text fill="#f54d45" layoutX="151.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIMON" textAlignment="CENTER" wrappingWidth="152.42396545410156">
+         <font>
+            <Font name="Showcard Gothic" size="49.0" />
+         </font>
+      </Text>
+   
+                <Label fx:id="welcomeText" layoutX="314.0" layoutY="217.0" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="422.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Jomuel, Nahiomy and Yabdiel">
+         <font>
+            <Font name="Showcard Gothic" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="290.0" layoutY="377.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: #383436;" text="Exit" textFill="#f54d45">
+         <font>
+            <Font name="Showcard Gothic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="262.0" layoutY="314.0" mnemonicParsing="false" onAction="#onHighScoresButtonClick" prefHeight="45.0" prefWidth="114.0" style="-fx-background-color: #383436;" text="HighScores" textFill="#2177d3">
+         <font>
+            <Font name="Showcard Gothic" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="#50c855" layoutX="177.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" wrappingWidth="19.3663330078125">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#fddb4c" layoutX="195.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#2177d3" layoutX="236.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#fddb4c" layoutX="366.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#2177d3" layoutX="396.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+      <Text fill="#f54d45" layoutX="431.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+         <font>
+            <Font name="Showcard Gothic" size="50.0" />
+         </font>
+      </Text>
+       <Button layoutX="281.0" layoutY="251.0" onAction="#onPLAYButtonClick" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: #383436;" text="PLAY" textFill="#fddb4c">
+         <font>
+            <Font name="Showcard Gothic" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
