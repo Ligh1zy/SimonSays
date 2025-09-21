@@ -4,6 +4,7 @@ module com.game.simonsays {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires java.desktop;
 
     opens com.game.simonsays to javafx.fxml;
     exports com.game.simonsays;
