@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-image: url('images/5a7e85e2ef0e0c76d5446556732f93a3.png'); -fx-background-size: cover; -fx-background-position: center; -fx-background-repeat: no-repeat; -fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.game.simonsays.SimonController">
+    <children>
+        <Pane fx:id="gamePanel" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: rgba(0,0,0,0.8);" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b191a" height="423.0" layoutX="285.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b191a" height="30.0" layoutX="85.0" layoutY="209.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="430.0" />
+                <Arc fx:id="arcGreen" centerX="0" centerY="0" fill="#50c855" layoutX="285.0" layoutY="208.0" length="90" radiusX="200" radiusY="200" startAngle="90.0" stroke="#383436" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="10.0" type="ROUND">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Arc>
+                <Arc fx:id="arcRed" centerX="0" centerY="0" fill="#f54d45" layoutX="315.0" layoutY="209.0" length="90" radiusX="200" radiusY="200" startAngle="0" stroke="#383436" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="10.0" type="ROUND">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Arc>
+                <Arc fx:id="arcYellow" centerX="0" centerY="0" fill="#fddb4c" layoutX="285.0" layoutY="231.0" length="90" radiusX="200" radiusY="200" startAngle="180" stroke="#383436" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="10.0" type="ROUND">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Arc>
+                <Arc fx:id="arcBlue" centerX="0" centerY="0" fill="#2177d3" layoutX="315.0" layoutY="231.0" length="90" radiusX="200" radiusY="200" startAngle="270" stroke="#383436" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="10.0" type="ROUND">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Arc>
+
+                      <Circle fill="#1b191a" layoutX="300.0" layoutY="221.0" radius="60.0" stroke="#383436" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" />
+                <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="175.0" prefHeight="90.0" prefWidth="90.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Showcard Gothic" size="38.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="menuPanel" layoutX="0" layoutY="0" prefHeight="480.0" prefWidth="640.0" visible="false">
+            <children>
+                <Button layoutX="281.0" layoutY="251.0" onAction="#onPLAYButtonClick" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: #383436;" text="PLAY" textFill="#fddb4c">
+                    <font>
+                        <Font name="Showcard Gothic" size="20.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text fill="#50c855" layoutX="342.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAYS!">
+                    <font>
+                        <Font name="Showcard Gothic" size="49.0" />
+                    </font>
+                </Text>
+                <Text fill="#f54d45" layoutX="151.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIMON" textAlignment="CENTER" wrappingWidth="152.42396545410156">
+                    <font>
+                        <Font name="Showcard Gothic" size="49.0" />
+                    </font>
+                </Text>
+
+                <Label fx:id="statusLabel" layoutX="314.0" layoutY="217.0" textFill="WHITE" />
+                <Text fill="WHITE" layoutX="422.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Jomuel, Nahiomy and Yabdiel">
+                    <font>
+                        <Font name="Showcard Gothic" size="12.0" />
+                    </font>
+                </Text>
+                <Button layoutX="290.0" layoutY="377.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: #383436;" text="Exit" textFill="#f54d45">
+                    <font>
+                        <Font name="Showcard Gothic" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="262.0" layoutY="314.0" mnemonicParsing="false" onAction="#onHighScoresButtonClick" prefHeight="45.0" prefWidth="114.0" style="-fx-background-color: #383436;" text="HighScores" textFill="#2177d3">
+                    <font>
+                        <Font name="Showcard Gothic" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text fill="#50c855" layoutX="177.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" wrappingWidth="19.3663330078125">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+                <Text fill="#fddb4c" layoutX="195.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+                <Text fill="#2177d3" layoutX="236.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+                <Text fill="#fddb4c" layoutX="366.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+                <Text fill="#2177d3" layoutX="396.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+                <Text fill="#f54d45" layoutX="431.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+                    <font>
+                        <Font name="Showcard Gothic" size="50.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+      <Pane fx:id="gameOverPanel" prefHeight="480.0" prefWidth="640.0" visible="false">
+         <children>
+            <Button layoutX="245.0" layoutY="255.0" onAction="#onPLAYButtonClick" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #383436;" text="PLAY AGAIN" textFill="#fddb4c">
+               <font>
+                  <Font name="Showcard Gothic" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="#50c855" layoutX="342.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OVER!">
+               <font>
+                  <Font name="Showcard Gothic" size="49.0" />
+               </font>
+            </Text>
+            <Text fill="#f54d45" layoutX="151.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME" textAlignment="CENTER" wrappingWidth="152.42396545410156">
+               <font>
+                  <Font name="Showcard Gothic" size="49.0" />
+               </font>
+            </Text>
+            <Label fx:id="statusLabel1" layoutX="314.0" layoutY="217.0" textFill="WHITE" />
+            <Button layoutX="290.0" layoutY="377.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: #383436;" text="Exit" textFill="#f54d45">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="266.0" layoutY="317.0" mnemonicParsing="false" onAction="#onHighScoresButtonClick" prefHeight="45.0" prefWidth="106.0" style="-fx-background-color: #383436;" text="MAIN MENU" textFill="#2177d3">
+               <font>
+                  <Font name="Showcard Gothic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="#50c855" layoutX="194.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" wrappingWidth="19.3663330078125">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#fddb4c" layoutX="224.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#2177d3" layoutX="265.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#fddb4c" layoutX="375.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#2177d3" layoutX="408.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#f54d45" layoutX="435.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Label layoutX="245.0" layoutY="191.0" prefHeight="35.0" prefWidth="90.0" text="Score:" textFill="WHITE">
+               <font>
+                  <Font name="Showcard Gothic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="335.0" layoutY="194.0" text="1000" textFill="WHITE">
+               <font>
+                  <Font name="Showcard Gothic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="menuPanel1" prefHeight="480.0" prefWidth="640.0">
+         <children>
+            <Text fill="#f54d45" layoutX="137.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HIGH SCORES!" textAlignment="CENTER" wrappingWidth="366.42396545410156">
+               <font>
+                  <Font name="Showcard Gothic" size="49.0" />
+               </font>
+            </Text>
+            <Label fx:id="statusLabel2" layoutX="314.0" layoutY="217.0" textFill="WHITE" />
+            <Button layoutX="22.0" layoutY="413.0" mnemonicParsing="false" onAction="#onExitButtonClick" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: #383436;" text="Exit" textFill="#f54d45">
+               <font>
+                  <Font name="Showcard Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="496.0" layoutY="406.0" mnemonicParsing="false" onAction="#onHighScoresButtonClick" prefHeight="45.0" prefWidth="114.0" style="-fx-background-color: #383436;" text="MAIN MENU" textFill="#2177d3">
+               <font>
+                  <Font name="Showcard Gothic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="#50c855" layoutX="192.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I" wrappingWidth="19.3663330078125">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#fddb4c" layoutX="210.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="G">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#2177d3" layoutX="244.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#fddb4c" layoutX="317.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#2177d3" layoutX="379.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#50c855" layoutX="346.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+            <Text fill="#fddb4c" layoutX="440.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+               <font>
+                  <Font name="Showcard Gothic" size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+    </children>
+</Pane>
