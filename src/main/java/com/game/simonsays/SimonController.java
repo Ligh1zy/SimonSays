@@ -64,7 +64,7 @@ public class SimonController {
                 scoreLabel.setText(String.valueOf(score));
                 addNewColorToSequence();
                 PauseTransition pause = new PauseTransition(Duration.seconds(0.7));
-                pause.setOnFinished(event -> playSequence());
+                pause.setOnFinished(event -> playSequence(0));
                 pause.play();
             }
         } else {
@@ -82,26 +82,22 @@ public class SimonController {
         pause.setOnFinished(event -> arc.setEffect(null));
         pause.play();
     }
-// Method to play the color sequences
-    private void playSequence()
-    {
-        isPlayingSequence = true;
+// Method to play the color sequences(Via recursion)
+private void playSequence(int index) {
+// If placed to check if player can interact
+    if (index >= colorSequence.size()) {
+        isPlayingSequence = false;
         currentStep = 0;
-        // Create a list of pauses for each color in sequence
-        for (int i = 0; i < colorSequence.size(); i++) {
-            final int index = i;
-            PauseTransition stepPause = new PauseTransition(Duration.seconds(i * 0.7));
-            stepPause.setOnFinished(event -> {flashArc(colorSequence.get(index));
-// If this is the last color is shown, allow player to play after a delay
-            if (index == colorSequence.size() - 1) {
-                PauseTransition finalPause = new PauseTransition(Duration.seconds(1.0));
-                finalPause.setOnFinished(e -> isPlayingSequence = false);
-                finalPause.play();
-            }
-            });
-            stepPause.play();
-        }
+        return;
     }
+    isPlayingSequence = true;
+    Arc arc = colorSequence.get(index);
+    flashArc(arc);
+// Wait and show next Color
+    PauseTransition pause = new PauseTransition(Duration.seconds(0.7));
+    pause.setOnFinished(event -> playSequence(index + 1));
+    pause.play();
+}
 // Add the color to the sequence
     private void addNewColorToSequence() {
         int randomColor = random.nextInt(4);
@@ -128,7 +124,7 @@ public class SimonController {
 
 // Short pause before starting
         PauseTransition pause = new PauseTransition(Duration.seconds(1.0));
-        pause.setOnFinished(event -> playSequence());
+        pause.setOnFinished(event -> playSequence(0));
         pause.play();
     }
 // If the player gets it wrong
