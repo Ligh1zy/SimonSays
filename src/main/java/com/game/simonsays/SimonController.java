@@ -328,7 +328,7 @@ public class SimonController {
         } else if (arc == arcBlue && blueSound != null) {
             blueSound.play();
         }
-// Pause for 0.5 seconds, then remove effect
+// Pause for 0.3 seconds, then remove effect
         PauseTransition pause = new PauseTransition(Duration.seconds(0.3));
         pause.setOnFinished(event -> arc.setEffect(null));
         pause.play();
@@ -373,7 +373,7 @@ public class SimonController {
     -fx-control-inner-background: transparent;
     -fx-text-fill: white;
     -fx-font-family: 'Showcard Gothic';
-    -fx-font-size: 16px;
+    -fx-font-size: 15px;
     -fx-text-alignment: center;
     """);
         highscoreListView.getItems().clear();
@@ -391,13 +391,20 @@ public class SimonController {
         try {
             List<String> lines = Files.readAllLines(Paths.get("highscores.txt"));
             lines.sort((line1, line2) -> {
-                String score1 = line1.replaceAll("\\D", "");
-                String score2 = line2.replaceAll("\\D", ""); // Only compare numbers
-                return score2.compareTo(score1); // Descending order
+                int score1 = Integer.parseInt(line1.replaceAll("\\D", ""));
+                int score2 = Integer.parseInt(line2.replaceAll("\\D", "")); // Only compare numbers
+                return Integer.compare(score2, score1); // Descending order
             });
+// Keep only 10 highcores
+            if (lines.size() > 10) {
+                lines = lines.subList(0, 10);
+            }
             Files.write(Paths.get("highscores.txt"), lines);
         } catch (IOException e) {
             System.out.println("Error sorting highscores: " + e.getMessage());
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Error parsing scores: " + e.getMessage());
         }
     }
 // Game start

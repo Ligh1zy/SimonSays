@@ -1,1 +1,10 @@
-JSM     5
+HSR     14
+JSM     12
+HSR     10
+SAD     10
+EDU     9
+HSR     9
+AYU     8
+JAC     8
+YEH     7
+NAH     6

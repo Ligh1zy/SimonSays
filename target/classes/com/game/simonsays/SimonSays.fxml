@@ -323,7 +323,7 @@
                   <Font name="Showcard Gothic" size="50.0" />
                </font>
             </Text>
-            <ListView fx:id="highscoreListView" fixedCellSize="25.0" layoutX="262.0" layoutY="163.0" prefHeight="250.0" prefWidth="256.0" style="-fx-text-aligment: center; -fx-background-color: transparent; -fx-font-family: 'Showcard Gothic'; -fx-font-size: 16; -fx-text-fill: white;" />
+            <ListView fx:id="highscoreListView" fixedCellSize="25.0" layoutX="262.0" layoutY="163.0" prefHeight="260.0" prefWidth="256.0" style="-fx-text-aligment: center; -fx-background-color: transparent; -fx-font-family: 'Showcard Gothic'; -fx-font-size: 16; -fx-text-fill: white;" />
          </children>
       </Pane>
    </children>
